@@ -15,6 +15,7 @@
 
 body{
     background-color: var(--dark_cyan);
+    position: relative;
 }
 
 main{
@@ -84,22 +85,45 @@ h2{
     font-size: .8rem;
 } 
 
-.bkgrnd_pattern{
-    position: relative;
+.bkgrnd_top{    
+    position: fixed;
+    top: -10rem;
+    left: -12rem;
+    width: 25rem;
 }
 
-.bkgrnd_top{    
-    position: absolute;
-    overflow: clip;
-    width: 30rem;
-    top: -32%;
-    left: -78%;
-} 
-
 .bkgrnd_bottom{
-    position: absolute;
-    overflow: clip;
-    width: 25rem;
-    bottom: 0%;
-    right: -62%;
+    position: fixed;
+    bottom: -8rem;
+    right: -18rem;
+    width: 29rem;
+}
+
+@media (min-width: 400px) {
+    .shell_main{
+        width: 340px;
+        margin-top: 10%;
+    }
+    .bkgrnd_top{
+        width: 60%;
+        top: -20rem;
+    }
+    .bkgrnd_bottom{
+        width: 60%;
+        right: -10rem;
+        bottom: -20rem;
+    }
+
+}
+@media (min-width: 900px) {
+    .bkgrnd_top{
+        width: 60%;
+        top: -50rem;
+    }
+    .bkgrnd_bottom{
+        width: 60%;
+        right: -10rem;
+        bottom: -45rem;
+    }
+
 }
